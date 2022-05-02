@@ -1,9 +1,19 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (i=0; i < array.length - 1; i++) {
+    let complement = target - array[i]
+      for (j = i+1; j < array.length; j++) {
+        if (array[j] === complement) return true
+      }
+  }
+  return false
 }
+
+
 
 /* 
   Write the Big O time complexity of your function here
+  O(n^2)
 */
 
 /* 
